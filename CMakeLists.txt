@@ -10,7 +10,7 @@ set (etcd-cpp-api_VERSION_MAJOR 0)
 set (etcd-cpp-api_VERSION_MINOR 1)
 
 enable_testing()
-include_directories(SYSTEM ${CPPREST_INCLUDE_DIR} ${Boost_INCLUDE_DIR})
+include_directories(SYSTEM ${CPPREST_INCLUDE_DIR} ${Boost_INCLUDE_DIRS})
 include_directories(${CMAKE_CURRENT_SOURCE_DIR})
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Wpedantic -Werror -std=c++11")
 
@@ -22,4 +22,3 @@ set(CMAKE_USE_PTHREADS_INIT 1)
 set(THREADS_PREFER_PTHREAD_FLAG ON)
 
 add_subdirectory(src)
-add_subdirectory(tst)
